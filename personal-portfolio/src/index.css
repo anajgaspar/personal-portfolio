@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import 'flowbite';
+
+html {
+  scroll-behavior: smooth;
+  background-color: #3c0366;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+#code-text {
+  font-family: 'Source Code Pro', monospace;
+}

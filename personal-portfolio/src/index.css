@@ -13,3 +13,17 @@ html {
 #code-text {
   font-family: 'Source Code Pro', monospace;
 }
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  background: white;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background: black;
+  opacity: 1;
+}

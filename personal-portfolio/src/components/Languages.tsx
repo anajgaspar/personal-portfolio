@@ -88,8 +88,10 @@ export function Languages() {
 
     return (
         <div id="skills" className="scroll-mt-48 container mx-auto mt-14">
-            <h1 className="text-2xl text-white text-center font-semibold">{t("languages.title")}</h1>
-            <div className="flex mx-auto h-[1px] bg-linear-to-l from-[#FF67B6] via-[#FF67B6] to-[#3E46D7] max-w-2xs mt-2"></div>
+            <div className="w-full mx-auto gap-2 px-14 mb-10">
+                <h1 className="text-2xl text-white text-center font-semibold">{t("languages.title")}</h1>
+                <div className="flex mx-auto h-[1px] bg-linear-to-l from-[#FF67B6] via-[#FF67B6] to-[#3E46D7] max-w-2xs mt-2"></div>
+            </div>
             <div className="flex flex-row flex-wrap items-center justify-center gap-10 md:gap-10 mt-12 mx-auto max-w-5xl">
                 {habilidades.map((habilidade) => (
                     <div key={habilidade.alt} className="bg-white rounded-lg p-6 border-l-4 border-purple-500">

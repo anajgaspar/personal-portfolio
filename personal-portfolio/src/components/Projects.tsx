@@ -74,9 +74,9 @@ export function Projeto() {
             <div className="w-full mx-auto gap-2 px-14 mb-10">
                 <h1 className="text-2xl text-white text-center font-semibold">{t("projects.title")}</h1>
                 <div className="flex mx-auto h-[1px] bg-linear-to-l from-[#FF67B6] via-[#FF67B6] to-[#3E46D7] max-w-2xs mt-2">
-                </div>
             </div>
-            <div className="flex mx-auto flex-col justify-center items-center max-w-5xl">
+            </div>
+            <div className="flex mx-auto flex-col justify-center items-center max-w-5xl px-8">
                 <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {projetos.map((projeto) => (

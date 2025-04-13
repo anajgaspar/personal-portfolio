@@ -64,7 +64,7 @@ export function Footer() {
                 </a>
             </div>
             <div className="flex justify-center mb-4">
-                <p className="text-xs text-white font-light">&copy;{t("footer.copyright")}</p>
+                <p className="text-xs text-white text-center font-light">&copy;{t("footer.copyright")}</p>
             </div>
         </div >
     )

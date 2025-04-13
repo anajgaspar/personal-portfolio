@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoMailUnread } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import { IoChatbox } from "react-icons/io5";
 import { useState } from "react";
 import { useEffect } from "react";
 import i18n from "@/i18n"
@@ -27,31 +28,43 @@ export function Footer() {
     }, []);
 
     return (
-        <div id="contato" className="scroll-mt-14 container mx-auto px-14">
-            <div className="flex flex-row items-center gap-2 mt-10">
-                <div className="flex-grow h-[2px] bg-white" />
-                <h1 className="text-2xl text-white font-semibold whitespace-nowrap">&lt;{t("footer.title")}/&gt;</h1>
-                <div className="flex-grow h-[2px] bg-white" />
+        <div id="contato" className="scroll-mt-20 container mx-auto px-14 mt-8">
+            <h1 className="text-2xl text-white text-center font-semibold">{t("footer.title")}</h1>
+            <div className="flex mx-auto h-[1px] bg-linear-to-l from-[#FF67B6] via-[#FF67B6] to-[#3E46D7] max-w-2xs mt-2"></div>
+            <p className="text-md text-white text-center mt-10">{t("footer.description")}</p>
+            <div className="flex mx-auto justify-center">
+                <a href="mailto:anajulia3907@gmail.com" target="_blank">
+                    <Button className="cursor-pointer w-45 p-2 gap-1 mt-10 h-14 bg-white text-sm text-purple-950 transition transform duration-300 hover:-translate-y-1">
+                        <span className="flex items-center gap-1 bg-linear-to-l from-[#FF67B6] via-[#FF67B6] to-[#3E46D7] bg-clip-text text-transparent">
+                            <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <defs>
+                                    <linearGradient id="gradienteIcone" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style={{ stopColor: '#FF67B6', stopOpacity: 1 }} />
+                                        <stop offset="50%" style={{ stopColor: '#9E56C6', stopOpacity: 1 }} />
+                                        <stop offset="100%" style={{ stopColor: '#3E46D7', stopOpacity: 1 }} />
+                                    </linearGradient>
+                                </defs>
+                                <path fill="url(#gradienteIcone)" fill-rule="evenodd" d="M3 5.983C3 4.888 3.895 4 5 4h14c1.105 0 2 .888 2 1.983v8.923a1.992 1.992 0 0 1-2 1.983h-6.6l-2.867 2.7c-.955.899-2.533.228-2.533-1.08v-1.62H5c-1.105 0-2-.888-2-1.983V5.983Zm5.706 3.809a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Zm2.585.002a1 1 0 1 1 .003 1.414 1 1 0 0 1-.003-1.414Zm5.415-.002a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Z" clip-rule="evenodd" />
+                            </svg>
+                            {t("footer.submit")}
+                        </span>
+                    </Button>
+                </a>
             </div>
-            <div className="flex flex-row items-center justify-center my-10 gap-10">
+            <div className="flex flex-row items-center justify-center mt-10 mb-48 gap-10">
                 <a href="https://github.com/anajgaspar" target="_blank" rel="noopener noreferrer">
-                    <Button className="cursor-pointer transition transform duration-300 hover:-translate-y-1">
-                        <FaGithub className="h-[40px] w-[40px]" />
+                    <Button className="cursor-pointer">
+                        <FaGithub className="h-[30px] w-[30px]" />
                     </Button>
                 </a>
                 <a href="https://www.linkedin.com/in/ana-gaspar-957775325/" target="_blank" rel="noopener noreferrer">
-                    <Button className="cursor-pointer transition transform duration-300 hover:-translate-y-1">
-                        <FaLinkedinIn className="h-[40px] w-[40px]" />
-                    </Button>
-                </a>
-                <a href="mailto:anajulia3907@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <Button className="cursor-pointer transition transform duration-300 hover:-translate-y-1">
-                        <IoMailUnread className="h-[40px] w-[40px]" />
+                    <Button className="cursor-pointer">
+                        <FaLinkedinIn className="h-[30px] w-[30px]" />
                     </Button>
                 </a>
             </div>
-            <div className="flex justify-center items-center mt-14 mb-2">
-                <p className="text-xs text-white font-light">© Copyright 2025 - Ana Gaspar - All Rights Reserved </p>
+            <div className="flex justify-center mb-4">
+                <p className="text-xs text-white font-light">&copy;{t("footer.copyright")}</p>
             </div>
         </div >
     )

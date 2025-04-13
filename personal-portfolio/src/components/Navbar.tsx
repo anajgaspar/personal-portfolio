@@ -24,31 +24,64 @@ export function CustomNavbar() {
     }, []);
 
     return (
-        <Navbar className="!bg-purple-950 shadow-md sticky top-0 z-50">
-            <NavbarBrand href="#inicio">
-                <span className="self-center whitespace-nowrap text-lg font-semibold text-black">
-                    &lt;anajgaspar/&gt;
-                </span>
-            </NavbarBrand>
-            <div className="flex md:order-2 items-center gap-2">
-                <Button onClick={toggleLanguage} className="text-white text-xl cursor-pointer">
-                    <img src={language === "pt" ? "/flags/us.svg" : "/flags/br.svg"} alt={language === "pt" ? "English" : "Português"} className="w-6 h-5 rounded-full object-cover"/>
-                </Button>
-                <NavbarToggle />
+        <Navbar className="!bg-purple-950 shadow-sm sticky top-0 z-50">
+            <div className="container mx-auto flex justify-between items-center">
+                <NavbarBrand href="#inicio">
+                    <span className="self-center whitespace-nowrap text-lg font-semibold text-white">
+                        &lt;anajgaspar/&gt;
+                    </span>
+                </NavbarBrand>
+                <div className="flex md:order-2 items-center gap-2">
+                    <Button onClick={toggleLanguage} className="text-white text-xxl cursor-pointer md:hidden">
+                        <img src={language === "pt" ? "/flags/us.png" : "/flags/br.png"} alt={language === "pt" ? "English" : "Português"} className="w-7 h-[20px] rounded-md"/>
+                    </Button>
+                    <NavbarToggle className="md:hidden" />
+                </div>
+                <div className="hidden md:flex justify-end items-center w-full">
+                    <ul className="flex items-center gap-4">
+                        <li>
+                            <a href="#inicio" className="text-white text-base font-semibold relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#ad46ff] after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                                {t("nav.home")}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills" className="text-white text-base font-semibold relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#ad46ff] after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                                {t("nav.skills")}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projetos" className="text-white text-base font-semibold relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#ad46ff] after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                                {t("nav.projects")}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contato" className="text-white text-base font-semibold relative after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#ad46ff] after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                                {t("nav.contact")}
+                            </a>
+                        </li>
+                        <li>
+                            <Button onClick={toggleLanguage} className="text-white text-xl cursor-pointer">
+                                <img src={language === "pt" ? "/flags/us.png" : "/flags/br.png"} alt={language === "pt" ? "English" : "Português"} className="w-7 h-[20px] rounded-md" />
+                            </Button>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <NavbarCollapse>
-                <NavbarLink href="#inicio" className="text-white text-base font-semibold hover:text-purple-300">
-                    {t("nav.home")}
-                </NavbarLink>
-                <NavbarLink href="#skills" className="text-white text-base font-semibold hover:text-purple-300">
-                    {t("nav.skills")}
-                </NavbarLink>
-                <NavbarLink href="#projetos" className="text-white text-base font-semibold hover:text-purple-300">
-                    {t("nav.projects")}
-                </NavbarLink>
-                <NavbarLink href="#contato" className="text-white text-base font-semibold hover:text-purple-300">
-                    {t("nav.contact")}
-                </NavbarLink>
+            <NavbarCollapse id="mobile-menu" className="lg:hidden md:hidden">
+                <div className="flex flex-col gap-2">
+                    <a href="#inicio" className="text-white text-base font-semibold block py-2 pr-4 pl-3 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#9e6ffe] after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                        {t("nav.home")}
+                    </a>
+                    <a href="#skills" className="text-white text-base font-semibold block py-2 pr-4 pl-3 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#9e6ffe] after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                        {t("nav.skills")}
+                    </a>
+                    <a href="#projetos" className="text-white text-base font-semibold block py-2 pr-4 pl-3 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#9e6ffe] after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                        {t("nav.projects")}
+                    </a>
+                    <a href="#contato" className="text-white text-base font-semibold block py-2 pr-4 pl-3 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-[#9e6ffe] after:transition-width after:duration-300 after:ease-in-out hover:after:w-full">
+                        {t("nav.contact")}
+                    </a>
+                </div>
             </NavbarCollapse>
         </Navbar>
     );

@@ -54,10 +54,10 @@ export function Projeto() {
         {
             id: 3,
             titulo: t("projects.items.2.titulo"),
-            imagem: '/spoiler-projects/spoiler-portfolio.png',
+            imagem: '/spoiler-projects/spoiler-portfolio-express.png',
             descricao: t("projects.items.2.descricao"),
-            tecnologias: ['HTML5', 'CSS3', 'React', 'TypeScript', 'TailwindCSS'],
-            github: 'https://github.com/anajgaspar/personal-portfolio'
+            tecnologias: ['HTML5', 'CSS3', 'JavaScript', 'NodeJS', 'Express', 'EJS'],
+            github: 'https://github.com/anajgaspar/ejs-portfolio-exercise'
         },
         {
             id: 4,
@@ -70,13 +70,13 @@ export function Projeto() {
     ]
 
     return (
-        <div id="projetos" className="flex flex-col justify-center items-center scroll-mt-14 container mx-auto mt-10">
-            <div className="flex flex-row items-center w-full mx-auto gap-2 px-14 mb-10">
-                <div className="flex-grow h-[2px] bg-white" />
-                <h1 className="text-2xl text-white font-semibold whitespace-nowrap">&lt;{t("projects.title")}/&gt;</h1>
-                <div className="flex-grow h-[2px] bg-white" />
+        <div id="projetos" className="scroll-mt-34 container mx-auto mt-14">
+            <div className="w-full mx-auto gap-2 px-14 mb-10">
+                <h1 className="text-2xl text-white text-center font-semibold">{t("projects.title")}</h1>
+                <div className="flex mx-auto h-[1px] bg-linear-to-l from-[#FF67B6] via-[#FF67B6] to-[#3E46D7] max-w-2xs mt-2">
+                </div>
             </div>
-            <div className="px-4 sm:px-6 lg:px-10 mb-8">
+            <div className="flex mx-auto flex-col justify-center items-center max-w-5xl">
                 <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {projetos.map((projeto) => (
@@ -84,9 +84,8 @@ export function Projeto() {
                                 layoutId={`card-${projeto.id}`}
                                 key={projeto.id}
                                 onClick={() => setSelecionado(projeto)}
-                                className="bg-white/90 backdrop-blur-md rounded-xl p-4 cursor-pointer shadow-md hover:scale-105 transition-transform duration-300">
-                                <img src={projeto.imagem} alt={projeto.titulo} className="w-full h-40 object-cover rounded-lg mb-3" />
-                                <h3 className="text-lg font-semibold text-center text-black">{projeto.titulo}</h3>
+                                className="bg-white/90 backdrop-blur-md rounded-xl p-2 cursor-pointer shadow-md hover:scale-105 transition-transform duration-300">
+                                <img src={projeto.imagem} alt={projeto.titulo} className="w-full h-40 object-cover rounded-lg" />
                             </motion.div>
                         ))}
                     </div>
@@ -102,7 +101,7 @@ export function Projeto() {
                                 <motion.div
                                     layoutId={`card-${selecionado.id}`}
                                     className="fixed z-50 top-1/2 left-1/2 w-[90vw] max-w-xl bg-white rounded-xl p-6 shadow-2xl -translate-x-1/2 -translate-y-1/2">
-                                    <button onClick={() => setSelecionado(null)} className="absolute top-0 right-2 text-2xl text-purple-900 hover:text-black">
+                                    <button onClick={() => setSelecionado(null)} className="absolute top-0 right-2 text-2xl text-purple-500 hover:text-purple-700">
                                         &times;
                                     </button>
                                     <img src={selecionado.imagem} alt={selecionado.titulo} className="w-full h-48 object-cover rounded-lg mb-4" />
@@ -112,12 +111,12 @@ export function Projeto() {
                                     {Array.isArray(selecionado.tecnologias) && selecionado.tecnologias.length > 0 && (
                                         <div className="flex flex-wrap gap-2 mb-4">
                                             {selecionado.tecnologias.map((tec, i) => (
-                                                <span key={i} className="text-sm border border-purple-900 text-purple-900 rounded-full px-3 py-1">{tec}</span>
+                                                <span key={i} className="text-sm border border-purple-500 text-purple-500 rounded-full px-3 py-1">{tec}</span>
                                             ))}
                                         </div>
                                     )}
                                     {selecionado.github && (
-                                        <a href={selecionado.github} target="_blank" className="inline-flex items-center gap-2 p-2 rounded-full bg-purple-900 text-white hover:bg-purple-700 transition">
+                                        <a href={selecionado.github} target="_blank" className="inline-flex items-center gap-2 p-2 rounded-full bg-purple-500 text-white hover:bg-purple-700 transition">
                                             <FaGithub />
                                         </a>
                                     )}
@@ -126,6 +125,9 @@ export function Projeto() {
                         )}
                     </AnimatePresence>
                 </>
+            </div>
+            <div className="px-4 sm:px-6 lg:px-10">
+                <div className="flex mx-auto h-[1px] bg-linear-to-l from-[#FF67B6] via-[#FF67B6] to-[#3E46D7] mt-20"></div>
             </div>
         </div>
     )

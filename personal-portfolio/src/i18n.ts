@@ -32,17 +32,20 @@ const resources = {
             "descricao": "Desenvolvimento de um dashboard de indicadores para monitorar e visualizar o impacto da plataforma, fornecendo dados estratégicos para patrocinadores e stakeholders."
           },
           {
-            "titulo": "Portfólio Pessoal",
-            "descricao": "Desenvolvimento de um portfólio pessoal que reúne projetos e experiências."
+            "titulo": "Portfólio Acadêmico",
+            "descricao": "Desenvolvimento de um portfólio acadêmico que reúne projetos e informações profissionais."
           },
           {
             "titulo": "Em breve",
-            "descricao": "Novo projeto em andamento."
+            "descricao": ""
           }
         ]
       },
       footer: {
-        title: "Contato"
+        title: "Contato",
+        copyright: " Copyright 2025 - Ana Gaspar - Todos os direitos reservados",
+        submit: "Vamos conversar!",
+        description: "Sinta-se a vontade para me enviar uma mensagem! :)"
       }
     },
   },
@@ -71,12 +74,12 @@ const resources = {
             "descricao": "Development of a responsive web page with graphic visualizations to represent the overall performance of the city council."
           },
           {
-            "titulo": "Dashboard",
+            "titulo": "Indicators Dashboard",
             "descricao": "Development of a dashboard to monitor and visualize the platform's impact, providing strategic data to sponsors and stakeholders."
           },
           {
-            "titulo": "Personal Portfolio",
-            "descricao": "Development of a personal portfolio showcasing projects and experience."
+            "titulo": "Academic Portfolio",
+            "descricao": "Development of an academic portfolio showcasing projects and profissional information."
           },
           {
             "titulo": "Coming Soon",
@@ -85,7 +88,10 @@ const resources = {
         ]
       },
       footer: {
-        title: "Contact"
+        title: "Contact",
+        copyright: " Copyright 2025 - Ana Gaspar - All Rights Reserved",
+        submit: "Let's talk!",
+        description: "Feel free to send me a message! :)"
       }
     },
   },
